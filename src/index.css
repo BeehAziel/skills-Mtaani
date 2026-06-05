@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-lime-brand: #C5F135;
+  --color-orange-brand: #FF5C28;
+  --color-sky-brand: #3AAFFF;
+  --color-purple-brand: #8B5CF6;
+  --color-bg-dark: #0E0E0E;
+  --color-card-dark: #141414;
+  --color-border-dark: #1f1f1f;
+  --color-text-muted: #888888;
+  --color-white-pure: #FAFAF7;
+  
+  --font-display: "Syne", sans-serif;
+  --font-sans: "DM Sans", sans-serif;
+}
+
+body {
+  background-color: #0E0E0E; /* fall back if var not loaded */
+  background-color: var(--color-bg-dark);
+  color: var(--color-white-pure);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom continuous scrolling banner animation (20s loop) */
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker 25s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border-dark);
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border-dark);
+}
+
+/* Custom micro animations */
+.glow-lime:hover {
+  box-shadow: 0 0 20px rgba(197, 241, 53, 0.35);
+}
+.glow-orange:hover {
+  box-shadow: 0 0 20px rgba(255, 92, 40, 0.35);
+}
+.glow-sky:hover {
+  box-shadow: 0 0 20px rgba(58, 175, 255, 0.35);
+}
+.glow-purple:hover {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.35);
+}

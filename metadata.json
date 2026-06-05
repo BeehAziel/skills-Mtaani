@@ -1,0 +1,6 @@
+{
+  "name": "Skill Mtaani",
+  "description": "Youth skill-sharing platform for Kasarani residents to learn, teach, and grow together.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
